@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth'])->prefix('admin')->namespace('Backend')->name('admin.')->group(function() {
+Route::middleware([])->prefix('admin')->namespace('Backend')->name('admin.')->group(function() {
     Route::get('/',[
         'uses' => 'DashboardController@index',
         'as' => 'index'
